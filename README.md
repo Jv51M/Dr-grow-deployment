@@ -1,43 +1,35 @@
-# 🌱 Dr-Grow
+# 🌱 Dr-Grow (Deployment Repository)
 
-**Dr-Grow** is an AI-powered plant identification web app built by **Akshay, Winnie, Vishnu and Me**.
-It helps users identify different plant species using an image of a plant’s leaf and also includes an **offline AI chatbot** for interactive guidance.
+**Dr-Grow** is an AI-powered plant identification web app built by **Akshay, Winnie, Vishnu, and Me**.
+This repository is focused solely on **deploying the trained model** via **Streamlit**, making the application accessible to users.
 
-> 💡 *We hope our hard work proves useful to you!*
+> 💡 *For the complete source code, dataset, and model development details, please visit the main repository:*
+> 👉 [**Dr-Grow Main Repository**](https://github.com/Jv51M/Dr-grow)
 
 ---
 
 ## 🧠 Project Overview
 
-The development process was divided into two major stages:
+**Dr-Grow** identifies different plant species using an image of a plant’s leaf.
+It also features an **offline AI chatbot** for interactive guidance, powered by **Ollama**.
 
-1. **Model Development** – Creating an image recognition model in Python using TensorFlow and Scikit-learn.
-2. **Frontend Development** – Building a user-friendly interface with Streamlit for smooth interaction.
+The app is divided into two major stages:
 
-Currently, the model supports **7 plant classes**, due to limited high-quality dataset availability.
-The app also features an **offline chatbot**, powered by **Ollama**, supporting models like `llama3.2:1b` and Microsoft’s `phi`.
+1. **Model Development** – Creating and training a deep learning model in Python (available in the main repo).
+2. **Deployment** – Delivering the model through an interactive Streamlit web interface (this repository).
+
+Currently, the model supports **7 plant species**, based on the available dataset.
 
 ---
 
-## ⚙️ Tech Stack & Libraries
+## ⚙️ Tech Stack
 
-The project uses the following key Python libraries:
-
-* **Streamlit** – for building the web app interface
-* **TensorFlow** – for deep learning model training and prediction
-* **Scikit-learn** – for model evaluation and preprocessing
-* **Ngrok** – for secure tunneling and public access
-* **Ollama** – for offline AI chatbot support
-
-  * *Models used:* `llama3.2:1b` and `phi`
-  * [🧩 Setup Tutorial (YouTube)](https://youtu.be/xZL-WQLodDE)
-* **QRCode** – for generating QR codes
-* **OpenCV** – for image processing
-* **Matplotlib** – for data visualization
-* **NumPy** – for numerical computation
-* **Pandas** – for data handling
-* **PIL (Pillow)** – for image manipulation
-* **Datetime** – for date/time utilities
+* **Streamlit** – Frontend web interface for deployment
+* **TensorFlow** – Deep learning model
+* **Scikit-learn** – Preprocessing and model evaluation
+* **Ollama** – Offline chatbot integration (`llama3.2:1b`, `phi`)
+* **Ngrok** – Secure tunneling and public access
+* **QRCode**, **OpenCV**, **Matplotlib**, **NumPy**, **Pandas**, **PIL**, **Datetime** – Supporting utilities
 
 ---
 
@@ -45,43 +37,26 @@ The project uses the following key Python libraries:
 
 * **Python version:** 3.12.9
 
-  > ⚠️ Note: TensorFlow may have compatibility issues with newer Python versions. If you face errors, try running the project on **Python 3.12.9**.
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository
-
-   ```bash
-   git clone https://github.com/yourusername/Dr-Grow.git
-   cd Dr-Grow
-   ```
-2. Install dependencies
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Streamlit app
-
-   ```bash
-   streamlit run app.py
-   ```
-4. (Optional) Start the Ollama chatbot server
-
-   ```bash
-   ollama run llama3.2:1b
-   ```
+  > ⚠️ TensorFlow may have compatibility issues with newer Python versions.
+  > Use Python **3.12.9** for best performance.
 
 ---
 
 ## 🌿 Features
 
-* Leaf-based plant identification using a deep learning model
-* Interactive, user-friendly web interface
-* Offline chatbot integration
-* QR code support for easy sharing
-* Local and online access via Ngrok
+* Leaf-based plant identification
+* Interactive, user-friendly interface
+* Offline chatbot for plant care advice
+* QR code generation for easy sharing
+* Local or tunneled online access (via Ngrok)
+
+---
+
+## 🔗 Main Repository
+
+This deployment repository contains only the code and assets necessary to **serve the trained model**.
+For training scripts, datasets, and detailed implementation, visit:
+👉 [**https://github.com/Jv51M/Dr-grow**](https://github.com/Jv51M/Dr-grow)
 
 ---
 
