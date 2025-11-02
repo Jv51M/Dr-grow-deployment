@@ -9,8 +9,8 @@ import time
 import os
 
 # Paths
-MODEL_PATH = r".\Main\model_saved\2025-03-20-21-54-37\dr_grow_newdataset.keras"
-DATASET_PATH = r".\Main\Care dataset.xlsx"
+MODEL_PATH = r"Main/model_saved/2025-03-20-21-54-37/dr_grow_newdataset.keras"
+DATASET_PATH = r"Main\Care dataset.xlsx"
 
 # Model loader with error handling
 @st.cache_resource
@@ -119,3 +119,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
