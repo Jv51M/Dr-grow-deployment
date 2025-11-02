@@ -1,18 +1,19 @@
 import streamlit as st
 from PIL import Image
 import tensorflow as tf
-from tensorflow.keras.models import load_model  # type: ignore
+from tensorflow.keras.models import load_model 
 import numpy as np
 import cv2
 import pandas as pd
 import time
 import os
 
-# Paths
+st.set_page_config(page_title="Dr.Grow", page_icon="🌱")
+
 MODEL_PATH = r"Main/model_saved/2025-03-20-21-54-37/dr_grow_newdataset.keras"
 DATASET_PATH = r"Main/Care dataset.xlsx"
 
-# Model loader with error handling
+
 @st.cache_resource
 def load_plant_model():
     if not os.path.exists(MODEL_PATH):
@@ -20,7 +21,6 @@ def load_plant_model():
         raise FileNotFoundError(f"Model not found at {MODEL_PATH}")
     return load_model(MODEL_PATH)
 
-# Dataset loader with error handling
 @st.cache_data
 def load_dataset():
     if not os.path.exists(DATASET_PATH):
@@ -67,7 +67,7 @@ def show_plant_care(keyword):
         st.warning("No matching plant found in dataset.")
 
 def main():
-    st.set_page_config(page_title="Dr.Grow", page_icon="🌱")
+    # Removed st.set_page_config() from here
 
     # Initialize session state
     if 'page' not in st.session_state:
@@ -119,5 +119,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
